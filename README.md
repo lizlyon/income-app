@@ -6,3 +6,6 @@ link: https://62819bbb21663a1ef8adb2d7--income-app.netlify.app/
 * Email: elyon@chapman.edu
 * Course: CPSC458
 * Term: Spring 22
+
+## Sources:
+* gradient: https://www.csscodelab.com/background-gradient-animate-in-react/
