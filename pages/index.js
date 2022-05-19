@@ -44,9 +44,17 @@ export default function Home() {
 const StyledAuth = styled(Auth)`
   .sbui-btn {
     background-color: var(--rose);
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 10px;
+    letter-spacing: inherit;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
   }
   .sbui-btn:hover {
-    background-color: var(--rose);
+    background-color: #b8d6a3;
   }
   label {
     color: var(--parchment);
@@ -66,21 +74,28 @@ const Wrapper = styled.div`
 `
 
 const Content = styled.div`
-  padding-top: 50px;
+  padding-top: 30px;
   flex: 1;
   max-width: min(100%, 900px);
 `
 
 const LogoutButton = styled.button`
+  background: var(--rose);
   width: 100%;
-  background-color: transparent;
-  color: blue;
-  border: none;
-  border-radius: 10px;
-  padding: 15px;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: inherit;
+  padding: 10px;
   cursor: pointer;
-  font-size: 1.2rem;
-  font-weight: 500; 
-  margin-top: 20px;
-  margin-bottom: 20px;
+  border-color: transparent;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  color: white;
+
+  &:hover {
+    background-color: #b8d6a3;
+    color: white;
+    transition-duration: .2s;
+    transition-timing-function: cubic-bezier(0,0,.2,1);  }
   `

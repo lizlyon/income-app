@@ -33,10 +33,15 @@ const Wrapper = styled.main`
     letter-spacing: inherit;
     padding: 2px;
     cursor: pointer;
+    border-color: transparent;
+    box-shadow: 0 0 5px #719ECE;
+    color: var(--rose);
 
     &:hover {
       background-color: lightcoral;
-      color: black;
+      color: white;
+      transition-duration: .2s;
+      transition-timing-function: cubic-bezier(0,0,.2,1);
     }
   }
 `;

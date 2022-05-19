@@ -13,6 +13,7 @@ export default function IncomeForm({ onConfirm }) {
     <Form onSubmit={onConfirmMe}>
       <input
         value={income}
+        required
         placeholder="enter monthly income"
         onChange={(e) => setIncome(e.target.value)}
       />
@@ -30,9 +31,16 @@ const Form = styled.form`
   padding: 10px;
 
   input {
+    min-width: 250px; 
+    max-width: 500px;
     font-size: 1rem;
     padding: 10px;
     border-radius: 10px;
+    letter-spacing: inherit;
+    text-transform: lowercase;
+    border-color: transparent;
+    box-shadow: 0 0 3px #719ECE;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";;
   }
 `;
 

@@ -10,17 +10,44 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }body {
-    --parchment: #DCCEB9;
-    --burnt: #9A4D21;
-    --rose: #D8A99D;
+    --parchment: #ffffff;
+    --burnt: #1B2E5E;
+    --rose: #72a36c;
     margin: 0;
     padding: 0;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    background-color: var(--burnt);
+    background-color: white;
+    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+    background-size: 400% 400%;
+    -webkit-animation: gradient 30s ease infinite;
+            animation: gradient 30s ease infinite;    
     color: var(--parchment);
     position: relative;
+
+    @-webkit-keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
   }
   *, *::before, *::after {
     box-sizing: border-box;
@@ -29,7 +56,7 @@ const GlobalStyle = createGlobalStyle`
 
 const theme = {
   colors: {
-    primary: '#0070f3',
+    primary: '#0070f4',
   },
 }
 

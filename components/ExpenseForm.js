@@ -17,13 +17,16 @@ export default function ExpenseForm({ onConfirm }) {
     <Form onSubmit={onConfirmMe}>
       <input
         value={name}
+        type="text"
+        required
         placeholder="enter an expense"
         onChange={(e) => setName(e.target.value)}
       />
       <Spacer width={80} />
       <input
-        type="number"
+        type="int"
         placeholder="enter a cost"
+        required
         step="0.01"
         min="0.01"
         value={cost}
@@ -45,10 +48,15 @@ const Button = styled.button`
   letter-spacing: inherit;
   padding: 10px;
   cursor: pointer;
+  border-color: transparent;
+  box-shadow: 0 0 5px #719ECE;
+  color: var(--rose);
 
   &:hover {
-    background-color: lightcoral;
-    color: black;
+    background-color: var(--rose);
+    color: white;
+    transition-duration: .2s;
+    transition-timing-function: cubic-bezier(0,0,.2,1);  }
   }
 `;
 
@@ -67,5 +75,10 @@ const Form = styled.form`
     font-size: 1rem;
     padding: 10px;
     border-radius: 10px;
+    letter-spacing: inherit;
+    text-transform: lowercase;
+    border-color: transparent;
+    box-shadow: 0 0 3px #719ECE;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";;
   }
 `;
