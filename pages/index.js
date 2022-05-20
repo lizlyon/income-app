@@ -43,7 +43,7 @@ export default function Home() {
 
 const StyledAuth = styled(Auth)`
   .sbui-btn {
-    background-color: var(--rose);
+    background-color: var(--green);
     border-radius: 20px;
     font-size: 1rem;
     font-weight: 500;
@@ -57,13 +57,13 @@ const StyledAuth = styled(Auth)`
     background-color: #b8d6a3;
   }
   label {
-    color: var(--parchment);
+    color: var(--text);
   }
   .sbui-typography-link {
-    color: var(--parchment);
+    color: var(--text);
   }
   .sbui-typography-text {
-    color: var(--parchment);
+    color: var(--text);
   }
 `
 const Wrapper = styled.div`
@@ -80,7 +80,7 @@ const Content = styled.div`
 `
 
 const LogoutButton = styled.button`
-  background: var(--rose);
+  background: var(--green);
   width: 100%;
   border-radius: 20px;
   font-size: 1rem;

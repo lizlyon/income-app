@@ -17,25 +17,22 @@ export default function Expenses({ expenses, onRemove }) {
 const Wrapper = styled.main`
   display: flex;
   flex-direction: column;
-  justify-content: baseline;
-  /* align-items: center; */
   padding: 10px;
 
   button {
-    position: absolute;
-    right: 420px;
-    background: transparent;
-    width: 10%;
     border-radius: 20px;
     font-size: 1rem;
     font-weight: 500;
+    width: 10%;
+    height: 10%;
     text-transform: inherit;
     letter-spacing: inherit;
-    padding: 2px;
+    padding: 10px;
     cursor: pointer;
+    background: transparent;
     border-color: transparent;
     box-shadow: 0 0 5px #719ECE;
-    color: var(--rose);
+    color: var(--green);
 
     &:hover {
       background-color: lightcoral;
@@ -45,24 +42,3 @@ const Wrapper = styled.main`
     }
   }
 `;
-
-// const Button = styled.button`
-//   background: transparent;
-//   width: 10%;
-//   border-radius: 20px;
-//   font-size: 1rem;
-//   font-weight: 500;
-//   text-transform: inherit;
-//   letter-spacing: inherit;
-//   padding: 2px;
-//   cursor: pointer;
-
-//   &:hover {
-//     background-color: lightcoral;
-//     color: black;
-//   }
-// `;
-
-// const Spacer = styled.div`
-//   width: ${(p) => p.width}px;
-// `;

@@ -10,7 +10,7 @@ import styled from "styled-components";
 
 export default function App({user}) {
 
-    // to persist data use stickyState
+    // to persist local data use stickyState
     // const [data, setData] = useStickyState([], 'gratitudes');
 
     // const [income, setIncome] = useStickyState(null);
@@ -25,11 +25,10 @@ export default function App({user}) {
 
   // new 
   // useEffect(() => {
-  //   fetchIncome(),
-  //   fetchExpenses()
+  //   fetchIncome()
   // }, [loading])
 
-  // add new function to fetch income
+  // add new function to fetch income (not working)
   // const fetchIncome = async () => {
   //   let { data: income, error } = await supabase
   //       .from('expenses') // table name
@@ -41,7 +40,7 @@ export default function App({user}) {
   //   }
   // }
 
-  // add new function to fetch expenses
+  // add new function to fetch expenses (not working)
   // const fetchExpenses = async () => {
   //   let { data: expense, expcost, error } = await supabase
   //       .from('expenses') // table name
@@ -53,6 +52,7 @@ export default function App({user}) {
   //   }
   // }
 
+  // function that defines the expenses  
   const addExpense = (name, cost) => {
     setExpenses([
       ...expenses,
@@ -63,7 +63,7 @@ export default function App({user}) {
     ]);
   };
 
-  //new function 
+  //new function (not working)
   // const addIncome = async (income) => {
   //   if (income.length) {
   //     setLoading(true)
@@ -79,7 +79,7 @@ export default function App({user}) {
   //   }
   // }
 
-  //new function 
+  //new function (not working)
   // const addExpense = async (expense, expcost) => {
   //   /**
   //    * Sends a gratitude to our Supabase table
@@ -114,22 +114,6 @@ export default function App({user}) {
     setIncome(null);
     setExpenses([]);
   };
-
-  // new 
-//   if (loading) {
-//     return <Wrapper>
-//         <Border>
-//             <h1>Income App</h1>
-//             <p>Hello, {user.email}</p>
-//             <p>Loading...</p>
-//             </Border>
-//         </Wrapper>
-// }
-
-// new
-// if (error) {
-//     return <Wrapper>{JSON.stringify(error)}</Wrapper>
-// }
 
   return (
     <Wrapper>
@@ -173,12 +157,13 @@ const Wrapper = styled.main`
   justify-content: center;
   align-items: center;
   padding: 20px;
+  overflow-wrap: break-word;
 
   h1 {
     margin: 0;
     padding-top: 0;
     padding-bottom: 50px;
-    color: var(--parchment);
+    color: var(--text);
     font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";;
   }
 
@@ -190,7 +175,7 @@ const Wrapper = styled.main`
 
 const Border = styled.div`
   background-color: white;
-  color: var(--rose);
+  color: var(--green);
   height: min(90%, 900px);
   border-radius: 20px 20px 20px 20px;
   padding: 10px 30px 10px 30px;
@@ -217,10 +202,10 @@ const Button = styled.button`
   cursor: pointer;
   border-color: transparent;
   box-shadow: 0 0 5px #719ECE;
-  color: var(--rose);
+  color: var(--green);
 
   &:hover {
-    background-color: var(--rose);
+    background-color: var(--green);
     color: white;
     transition-duration: .2s;
     transition-timing-function: cubic-bezier(0,0,.2,1);  

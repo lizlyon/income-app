@@ -14,6 +14,7 @@ export default function IncomeForm({ onConfirm }) {
       <input
         value={income}
         required
+        type="int"
         placeholder="enter monthly income"
         onChange={(e) => setIncome(e.target.value)}
       />
@@ -40,27 +41,10 @@ const Form = styled.form`
     text-transform: lowercase;
     border-color: transparent;
     box-shadow: 0 0 3px #719ECE;
-    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 `;
 
 const Spacer = styled.div`
   width: ${(p) => p.width}px;
 `;
-
-// const Button = styled.button`
-//   background: transparent;
-//   width: 25%;
-//   border-radius: 20px;
-//   font-size: 1rem;
-//   font-weight: 500;
-//   text-transform: inherit;
-//   letter-spacing: inherit;
-//   padding: 5px;
-//   cursor: pointer;
-
-//   &:hover {
-//     background-color: lightcoral;
-//     color: black;
-//   }
-// `;

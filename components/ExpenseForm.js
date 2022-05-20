@@ -10,7 +10,7 @@ export default function ExpenseForm({ onConfirm }) {
     e.preventDefault();
     onConfirm(name, cost);
     setName("");
-    setCost(0);
+    setCost("");
   };
 
   return (
@@ -50,10 +50,10 @@ const Button = styled.button`
   cursor: pointer;
   border-color: transparent;
   box-shadow: 0 0 5px #719ECE;
-  color: var(--rose);
+  color: var(--green);
 
   &:hover {
-    background-color: var(--rose);
+    background-color: var(--green);
     color: white;
     transition-duration: .2s;
     transition-timing-function: cubic-bezier(0,0,.2,1);  }
@@ -69,7 +69,8 @@ const Form = styled.form`
   text-align: left;
   display: flex;
   flex-direction: row;
-  padding: 10px;
+  justify-content space-between;
+  padding:10px;
 
   input {
     font-size: 1rem;
@@ -80,5 +81,13 @@ const Form = styled.form`
     border-color: transparent;
     box-shadow: 0 0 3px #719ECE;
     font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";;
+  }
+
+  // small screen 
+  @media (max-width: 576px){
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 10px;
   }
 `;

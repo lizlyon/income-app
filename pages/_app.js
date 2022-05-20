@@ -10,9 +10,8 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }body {
-    --parchment: #ffffff;
-    --burnt: #1B2E5E;
-    --rose: #72a36c;
+    --text: #ffffff;
+    --green: #72a36c;
     margin: 0;
     padding: 0;
     text-transform: uppercase;
@@ -23,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
     background-size: 400% 400%;
     -webkit-animation: gradient 30s ease infinite;
             animation: gradient 30s ease infinite;    
-    color: var(--parchment);
+    color: var(--text);
     position: relative;
 
     @-webkit-keyframes gradient {
